@@ -52,16 +52,16 @@ password: root
 
 You can execute this command to create a new user in pg:
 
-```
+```sql
 CREATE USER rm WITH PASSWORD root;
 ```
 
 Once a user is created, it's time to create a database in order to run the test. To do so, execute the following commands in postgres:
 
-```
-drop database cat_test_db;
-create database cat_test_db;
-GRANT ALL PRIVILEGES ON DATABASE "cat_test_db" to rm;
+```sql
+DROP DATABASE cat_test_db;
+CREATE DATABASE cat_test_db;
+GRANT ALL PRIVILEGES ON DATABASE "cat_test_db" TO rm;
 ```
 
 Before running the tests, make sure that the following environment variables are set in your shell `.rc` file:
